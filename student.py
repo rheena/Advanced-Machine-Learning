@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu May 26 07:59:15 2022
+Created on Thu May 26 16:30:18 2022
 
-@author: rwmacharia1
+@author: m
 """
-
 
 from person import Person
 
 class Student(Person):
     
     def __init__(self, first, last, ID, school, major):
-        Person.__init__(self, first, last, ID)
+        super().__init__(first, last, ID)
         self._school = school
         self._major = major
         
@@ -22,7 +21,7 @@ class Student(Person):
         return self._major
     
     def get_name(self):
-        return super ().get_lastname() + "," + \
+        return super().get_lastname() + "," + \
             super().get_firstname()
             
     def __str__(self):

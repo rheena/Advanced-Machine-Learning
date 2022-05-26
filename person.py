@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu May 26 07:59:15 2022
+Created on Thu May 26 16:30:23 2022
 
-@author: rwmacharia1
+@author: m
 """
 
-class Person:
+class Person (object):
     
     count = 0
     
@@ -23,21 +23,17 @@ class Person:
     
     def set_firstname(self, firstname):
         self._firstname = firstname
-    
-    def set_lastname(self, lastname):
-        self._lastname = lastname
         
+    def set_lastname(self, lastname):
+         self._lastname = lastname   
+         
     def set_ID(self, ID):
         self._ID = ID
         
-    def get_firstname(self):
-        return self._firstname
+    """Create a string representation of the object"""
+    def __str__(self):
+        return self._firstname + " " + \
+            self._lastname + " " + \
+                str(self._ID)
     
-    def get_lastname(self):
-        return self._lasstname
-    
-    def get_ID(self):
-        return self._ID
-    
-    """ Create a string representation of the object"""
     
